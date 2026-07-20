@@ -1,4 +1,4 @@
-package com.github.katorly.exampleproject.events
+package com.katorly.exampleproject.events
 
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener

@@ -1,6 +1,6 @@
-package com.github.katorly.exampleproject.events
+package com.katorly.exampleproject.events
 
-import com.github.katorly.exampleproject.ExampleProject.Companion.plugin
+import com.katorly.exampleproject.ExampleProject.Companion.plugin
 import org.bukkit.Bukkit
 import org.bukkit.event.Listener
 

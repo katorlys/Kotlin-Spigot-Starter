@@ -1,4 +1,4 @@
-package com.github.katorly.exampleproject.commands
+package com.katorly.exampleproject.commands
 
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender

@@ -1,7 +1,7 @@
-package com.github.katorly.exampleproject
+package com.katorly.exampleproject
 
-import com.github.katorly.exampleproject.commands.regCommands
-import com.github.katorly.exampleproject.events.regEvents
+import com.katorly.exampleproject.commands.regCommands
+import com.katorly.exampleproject.events.regEvents
 import org.bukkit.Bukkit
 import org.bukkit.Bukkit.getScheduler
 import org.bukkit.event.HandlerList.unregisterAll

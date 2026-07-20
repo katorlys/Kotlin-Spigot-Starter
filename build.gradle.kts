@@ -4,9 +4,9 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     java
-    kotlin("jvm") version "2.1.20"
-    id("de.eldoria.plugin-yml.bukkit") version "0.7.1" // https://github.com/eldoriarpg/plugin-yml
-    id("com.gradleup.shadow") version "8.3.4" // https://github.com/GradleUp/shadow
+    kotlin("jvm") version "2.4.10"
+    id("de.eldoria.plugin-yml.bukkit") version "0.9.0" // https://github.com/eldoriarpg/plugin-yml
+    id("com.gradleup.shadow") version "9.6.0" // https://github.com/GradleUp/shadow
 }
 
 val spigotVersion: String by project
@@ -17,8 +17,8 @@ group = project.property("pluginGroup") as String
 version = project.property("pluginVersion") as String
 
 repositories {
-    maven("https://maven.aliyun.com/repository/public/") // Mirror: Comment this if you are not in China
-    maven("https://repo.huaweicloud.com/repository/maven/") // Mirror: Comment this if you are not in China
+    // maven("https://maven.aliyun.com/repository/public/") // Mirror: Ucomment this if you are in China
+    // maven("https://repo.huaweicloud.com/repository/maven/") // Mirror: Ucomment this if you are in China
     mavenLocal()
     mavenCentral()
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
@@ -53,11 +53,11 @@ bukkit {
 tasks {
     withType<JavaCompile> {
         options.encoding = "UTF-8"
-        sourceCompatibility = "21"
-        targetCompatibility = "21"
+        sourceCompatibility = "25"
+        targetCompatibility = "25"
     }
     withType<KotlinCompile> {
-        compilerOptions.jvmTarget.set(JvmTarget.JVM_21)
+        compilerOptions.jvmTarget.set(JvmTarget.JVM_25)
     }
     withType<ShadowJar> {
         archiveBaseName.set(pluginName)

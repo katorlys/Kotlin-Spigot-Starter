@@ -1,0 +1,22 @@
+{
+    "name": "Minecraft Plugin Gradle Container",
+    "image": "katorlys/workspace-java:latest",
+    "postCreateCommand": "./gradlew clean build",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "jetbrains.j2k-vscode",
+                "jetbrains.kotlin-server",
+                "redhat.fabric8-analytics",
+                "vscjava.vscode-gradle"
+            ],
+            "settings": {
+                "java.configuration.updateBuildConfiguration": "automatic",
+                "yaml.schemas": {
+                    "https://json.schemastore.org/bukkit-plugin.json": "file:///src/main/resources/plugin.yml"
+                },
+                "java.compile.nullAnalysis.mode": "automatic"
+            }
+        }
+    }
+}
